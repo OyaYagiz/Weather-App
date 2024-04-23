@@ -48,7 +48,7 @@ function weatherDetails(info){
     if(info.cod == "404"){
         infoTxt.classList.replace("pending", "error")
         infoTxt.innerText = "Şehir bulunamadı...";
-
+        console.log(info)
     }else{
 
      const city = info.name
