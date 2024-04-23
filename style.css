@@ -18,17 +18,17 @@ body{
 }
 
 .wrapper{
-    margin-top: 30px;
+    margin-top: 50px;
     width: 350px;
     border-radius: 7px;
-    background-color: #317777;
-background-image: linear-gradient(225deg, #275681 0%, #1b5f5b 100%);
+    background-color: #3177778e;
+background-image: linear-gradient(225deg, #27558191 0%, #1b5f5bb7 100%);
 
 
 
 }
 .wrapper header{
-    color: rgb(203, 207, 226);
+    color: #f8f7da;
     font-size: 24px;
     font-weight: 500;
     padding: 16px 15px;

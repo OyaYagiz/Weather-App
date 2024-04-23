@@ -47,9 +47,10 @@ function fetchData(){
 function weatherDetails(info){
     if(info.cod == "404"){
         infoTxt.classList.replace("pending", "error")
-        infoTxt.innerText = `${inputField.value} şehir bulunamadı...`
+        infoTxt.innerText = "Şehir bulunamadı...";
 
     }else{
+
      const city = info.name
      const country = info.sys.country
      const {description, id} = info.weather[0]
