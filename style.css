@@ -11,19 +11,25 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-image: url(weather.jpg);
+    min-width: 100vh;
+    background-position: center center;
+    background-image: url(img/beautiful-sea-at-sunset-with-the-reflection-thumb.jpg)
     
 }
 
 .wrapper{
+    margin-top: 30px;
     width: 350px;
     border-radius: 7px;
-    background: rgb(33, 127, 182);
+    background-color: #317777;
+background-image: linear-gradient(225deg, #275681 0%, #1b5f5b 100%);
+
+
+
 }
 .wrapper header{
-    color: aqua;
-    font-size: 40px;
+    color: rgb(203, 207, 226);
+    font-size: 24px;
     font-weight: 500;
     padding: 16px 15px;
     display: flex;
@@ -32,15 +38,25 @@ body{
 }
 header i{
     cursor: pointer;
-    font-size: 25px;
+    font-size: 0px;
     margin-right: 6px;
     
 }
-.wrapper .input-part{
+
+.wrapper.active header i{
+    font-size: 30px;
+    margin-left: 5px;
+}
+
+.wrapper.active .input-part{
     display: none;
+}
+.wrapper .input-part{
+    /* display: none; */
     margin:  20px 25px 30px;
     
 }
+
 
 .input-part .info-txt{
     display: none;
@@ -78,7 +94,7 @@ header i{
 }
 
 .input-part input:is(:focus, :valid){
-    border: 2px solid #0a4f5a;
+    border: 2px solid #127e8f;
 }
 
 .input-part .seperator{
@@ -110,16 +126,23 @@ header i{
 
 .wrapper .weather-part{
     margin: 30px 0 0;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.weather-part img{
-    max-width: 125px;
+.wrapper.active .weather-part{
+    display: flex;
 }
 
+.weather-part img{
+    max-width: 200px;
+}
+
+.weather-part .svg-icon{
+    max-width: 90px;
+}
 .weather-part .temp{
     display: flex;
     font-size: 72px;
@@ -155,15 +178,34 @@ header i{
     justify-content: space-between;
 }
 
-.weather-part .column{
+.bottom-details .column{
     width: 100%;
+    color: #d1ecf1;
     display: flex;
+    padding: 15px 0;
     align-items: center;
     justify-content: center;
 }
 .column i{
     color: #bee5eb;
-    font-size: 40px
-    
-    ;
+    font-size: 40px;
+}
+
+.column.humidity{
+    border-left: 1px solid #f8f7da;
+}
+.details .temp, .humisity span{
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: -4px;
+}
+
+.details .temp .deg{
+    margin: 0;
+    font-size: 17px;
+    padding: 0 2px 0 1px;
+}
+.details p{
+    font-size: 14px;
+    margin-top: 3px;
 }
